@@ -1,0 +1,798 @@
+/*reset*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*grid*/
+
+body{
+    background-color: rgb(198, 197, 197);
+    display: grid;
+    max-width: 1400px;
+    grid-template-columns:auto;
+    grid-template-rows: 0.1fr 0.03fr 2fr 0.2fr 0.2fr 0.4fr 0.3fr 0.01fr;
+    grid-template-areas: "header header header header"
+                            "menuP menuP menuP menuP "
+                            "imagen imagen imagen imagen"
+                            "icono icono icono icono"
+                            "texto texto texto texto"
+                            "datos datos datos datos"
+                            "footer footer footer footer"
+                            "copi copi copi copi";
+
+}
+/*grid area*/
+/*header*/
+
+
+header{
+    background-color:  rgb(104, 100, 100);
+    grid-area: header;
+    display: flex;
+    justify-content:space-between;
+    max-width: 1400px;
+}
+
+/*navegador*/
+
+.menu{
+    background-color:  rgb(175, 174, 174);
+    grid-area: menuP;
+    
+}
+
+.menu ul li{
+   display: flex;
+   justify-content: flex-start;
+}
+
+/*imagenes*/
+
+.mainImagenes{
+    background-color: rgb(104, 100, 100);
+    grid-area: imagen;
+}
+
+/*iconos*/
+
+.iconos{
+    background-color:  rgb(154, 152, 152);
+    grid-area: icono;
+}
+
+/*texto*/
+
+.textoCuerpo{
+    background-color: rgb(198, 197, 197);
+    grid-area: texto;
+}
+
+/*datos*/
+
+.datos{
+    grid-area: datos;
+    background-color:rgb(132, 128, 128);
+}
+
+/*footer*/
+
+.pieDePagina{
+    background-color:  rgb(153, 141, 141);
+    grid-area: footer;
+   
+}
+
+/*copy*/
+
+.copy{
+    grid-area: copi;
+}
+
+/*stilos*/
+
+/*titulo-stilo*/
+header .tituloLogo{
+    background-color:  rgb(104, 100, 100);
+    display: flex;  
+    align-items: center;
+    padding:1rem;
+    height: 6rem;
+}
+
+.tituloLogo h1{
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif; 
+    font-weight:bolder;
+}
+
+/*buscador-*/
+header .buscador{
+    background-color:  rgb(104, 100, 100);
+    display: flex;
+    align-items: center;
+    margin-left:5rem;
+}
+
+header .buscador input{
+    outline: none;
+    border: 1px solid rgb(44, 43, 43);
+    justify-content: center;
+    width:16rem;
+    height:2rem;
+    font-size:1rem;
+}
+
+/*icono-buscador*/
+
+header .buscador .iconoBuscador{
+    background-color:  rgb(44, 43, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 20% 20% 0%;
+    cursor: pointer;
+    width:2rem;
+    height:2rem;
+
+
+ }
+ 
+/*stilo-acceder*/
+.contenedorAccederCarrito{
+    display: flex;
+}
+
+header .acceder{
+    display: flex;
+    align-items: center;
+
+}
+header .acceder div{
+    font-weight: bold;
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 1.2rem;
+    padding-right: 16px;
+}
+
+/*estilos-carrito*/
+
+header .carrito{
+    background-color:  rgb(104, 100, 100);
+    display: flex;
+    align-items: center;
+    padding-right: 10rem;
+}
+
+
+header .carrito div{
+    font-weight: bold;
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+/*menu-estilos*/
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul div li {
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  font-family:'Albert Sans', sans-serif ;
+  font-weight: bold;
+  color: black;
+}
+
+.menu div{
+    margin: 16px;
+    height: 1.7rem;
+    padding: 0px 10px 10px 10px;
+    border-radius: 36%;
+    transition: 1s;
+}
+
+.menu div:hover{
+    background-color:rgb(116, 109, 109);
+    box-shadow: 2px 3px rgb(62, 61, 61);
+    transform: scale(1.05);
+    transform: rotate(2deg);
+ }
+
+.menu ul a{
+    text-decoration: none; 
+}
+
+/*fotos-main*/
+.contenedorMainImagenes{
+  background-color: rgb(103, 84, 84);
+  width:1400px;
+  display: flex;
+}
+
+.mainImagenes{
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mainImagenes ul{
+    background-color: black;
+    border: 1px solid rgb(220, 213, 213);
+    display: flex;
+    padding: 0%;
+    width: 400%;
+    animation: cambio 10s infinite alternate;   
+}
+
+.mainImagenes li{
+    width: 100%;
+    list-style: none;
+}
+
+.mainImagenes img {
+    width: 100%;
+    height: 90rem;
+}
+
+@keyframes cambio {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+
+}
+
+/*iconos-estilo*/
+
+.iconos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding-right: 2rem;
+}
+
+.iconos p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.icono1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   font-family:'Albert Sans', sans-serif ;
+   font-weight: bold;
+}
+
+.icono2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:'Albert Sans', sans-serif ;
+    font-weight: bold;
+   
+ }
+
+ .icono3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    font-family:'Albert Sans', sans-serif ;
+    font-weight: bold;
+ }
+
+ .icono4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:'Albert Sans', sans-serif ;
+    font-weight: bold;
+
+ }
+
+ /*estilos-texto*/
+
+ .textoCuerpo{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    height: 7rem;
+ }
+
+ .textoCuerpo .diseño{
+    font-family: 'Roboto', sans-serif;
+ }
+
+ .textoCuerpo .cuerpoP{
+    font-family:'Albert Sans', sans-serif ;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-right:2rem;
+}
+.textoCuerpo div{
+  padding-top: 1rem;
+ }
+
+.textoCuerpo div a{
+    background-color:rgb(139, 134, 134);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius:7%;
+    border: 0.2rem solid rgb(61, 60, 60);
+    color: rgb(93, 91, 91); 
+    font-size: 1rem;
+    padding: 10px;
+ }
+
+ /*datos-estilos*/
+ .contenedorDeDatos{
+    padding-top:1rem;
+    padding-bottom:1rem;
+ }
+
+ .datos .contenedorDeDatos{
+    background-color: rgb(153, 141, 141);
+    display:flex;
+    justify-content: space-evenly;
+
+ }
+
+ .datos .contenedorDeDatos .diseñoExclusivo .p1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    color: rgb(104, 100, 100);
+  
+ }
+
+ .datos .contenedorDeDatos .categorias .p3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: rgb(104, 100, 100);
+
+ }
+
+ .datos .contenedorDeDatos .contactanos .p4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(104, 100, 100);
+ }
+
+ /*datos-estilos*/
+
+ .datos .contenedorDeDatos .diseñoExclusivo .p2{
+    font-weight: bold;
+    font-family:'Albert Sans', sans-serif;
+ }
+
+ .datos .contenedorDeDatos .categorias a{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-family:'Albert Sans', sans-serif ;
+    text-decoration: none;
+    color: black;
+ }
+
+ 
+ .datos .contenedorDeDatos .contactanos p{
+    font-weight: bold;
+    font-family:'Albert Sans', sans-serif ;
+
+ }
+
+ /*pie de pagina*/
+
+ .pieDePagina{
+    display: flex;
+    align-items: center;
+ }
+
+ .textoMetodos{
+    margin: 2rem;
+    font-size: 1.2rem;
+ }
+ 
+ .pieDePagina .tarjeta1 img{
+    height: 2rem;
+    margin-right:1.5rem ;
+}
+
+.pieDePagina .tarjeta2 img {
+    height: 2rem;
+    margin-right:1rem ;
+}
+ 
+.pieDePagina .tarjeta3 img{
+    height: 2rem;
+    margin-right:1rem ;
+}
+ 
+.pieDePagina .tarjeta4 img{
+    height: 2rem;
+    margin-right:1rem ;
+}
+
+.pieDePagina p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(48, 48, 48);
+}
+
+.pieDePagina .tarjetaContenedor{
+    display: flex;
+}
+/*copi*/
+
+.copy{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color:  rgb(153, 141, 141);
+    color: rgb(57, 56, 56);
+}
+
+
+/*pagina NUEVO HTML*/
+.mainPagina{
+    width: 1400px;
+    display:flex;
+    flex-direction: column;
+}
+
+.contenedorSeccionPagina{
+    display: flex;
+    flex-direction: column;
+}
+
+.h1Pagina{
+    font-size: 1.6rem;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.sectionPagina{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 40px 20px 20px;
+}
+
+.sectionPagina2{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 40px 20px 20px;
+}
+
+.contenedorDeImagenesPagina{
+    width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.mainPagina img{
+    width: 22%;
+    border-radius: 10%;
+    border:1rem solid gray;
+}
+
+/*PAGINA NUEVa productos*/
+
+.galleriContenedor{
+    display: flex;
+    flex-direction:row;
+    width: 1400px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.conjunto1 img{
+    width: 25%;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.conjunto1 p{
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+}
+
+.conjunto2 img{
+    width: 34%;
+    padding-bottom: 1rem;
+}
+
+.conjunto2{
+    margin-right: 4rem;
+}
+
+.conjunto2 p{
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+
+.conjunto3 img{
+    width: 44%;
+    padding-bottom: 1rem;
+}
+
+.conjunto3 p{
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+
+/*nosotros NUEVO HTML*/
+
+.mainNosotros{
+    margin: 3rem;
+    padding-left: 6rem;
+}
+
+
+.mainNosotros h1{
+    margin: 3rem;
+    padding-left: 3rem;
+}
+
+main .nuestroEmprendimiento {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedordeP{
+   text-align: center;
+   margin-top:4rem;
+   font-size:1.5rem;
+   font-family: Arial, Helvetica, sans-serif;
+   color: rgb(59, 59, 59);
+}
+
+.contenedorNosotros{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap: 3rem;
+    margin-top: 10rem;
+}
+
+.mision .pMision {
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+}
+.mision .pMision i{
+    padding-right: 2rem ;
+}
+
+.vision .pVision{
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold
+}
+
+.vision .pVision i{
+    padding-right: 2rem 
+    
+}
+
+
+.valores .pValores {
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.valores .pValores i {
+    padding-right: 2rem 
+}
+
+/*bootstrap contactos*/
+.bodybootstrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerBootstrap  li{
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.tituloBootstap{
+    font-family:'Albert Sans', sans-serif;
+    height:2rem;
+}
+
+.navegadorBootstrap{
+    background-color: rgb(245, 219, 185);
+    width: 100%;
+}
+
+.classDeImagenesB .imgB{
+    width: 100%;
+    padding-top: 20px;
+    padding-left:2rem;
+}
+
+/*MEDIA QUERIS*/
+
+@media screen and (max-width:400px){
+    body{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows:0.4fr 0.03fr 0.2fr 0,03fr 1fr 1fr 0.03fr 0.7fr;
+        grid-template-areas: "header header"
+                                "menuP menuP"
+                                "imagen imagen"
+                                "icono icono"
+                                "texto texto"
+                                "datos datos"
+                                "footer footer"
+                                "copi copi";
+    
+    }
+
+    header{
+        background-color:  rgb(104, 100, 100);
+        grid-area: header;
+        display: flex;
+        justify-content:space-between;
+        max-width: 83%;
+        max-height: 10rem;  
+    }
+
+    header .tituloLogo{
+        display: flex;  
+        align-items:center;
+        padding-left: 2rem;
+    }
+
+    header .buscador{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header .buscador input{
+        justify-content: center;
+    }
+
+    header .acceder{
+        display:none;
+    }
+    
+    header .carrito{
+        display: none;
+ 
+    }
+
+    /*menu-media*/
+    .menu{
+        height: 5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .menu ul li{
+      text-decoration:none;
+      font-size: 1rem;
+      padding:1rem;
+    }
+
+    /*imagenes*/
+    .contenedorMainImagenes{
+        width: 1000px;
+        height: 60rem;
+    }
+
+    .mainImagenes{
+        width: 35%;
+        height: 70%;
+        margin-left: 13rem;
+    }
+
+    .mainImagenes ul img{
+        height: 150%;
+    }
+
+    .iconos{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 800px;
+        padding: 1rem;
+    }
+    
+    .iconos p{
+        text-align:center;
+        font-size:1rem;
+        padding-right: 20px;
+    }
+
+    .textoCuerpo{
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        padding-left:1rem;
+        text-align: center;
+        width: 800px;
+        height: 9rem;
+     }
+
+     .textoCuerpo div{
+        height:10px;
+     }
+
+     .datos .contenedorDeDatos .diseñoExclusivo .p1{
+        padding-bottom: 1rem;
+        text-align: center;  
+     }
+
+     .datos .contenedorDeDatos .diseñoExclusivo .p2{
+      font-size:1rem;
+      padding: 1rem;
+     }
+
+     .copy p{
+        width: 800px;
+        font-size: 14px;
+        height: 2rem;
+        display: flex;
+        justify-content:center;
+        margin: 0px;
+    }
+      
+    /*pagina quris*/
+    .mainPagina{
+        width: 400px;
+    }
+
+    .mainPagina .h1Pagina{
+        font-size: 13px;
+    }
+
+    .mainPagina .sectionPagina{
+        font-size: 8px;
+    }
+
+    .mainPagina .sectionPagina2{
+        font-size: 8px;
+    }
+
+    .contenedorDeImagenesPagina{
+        width: 350px;
+        margin-left: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
